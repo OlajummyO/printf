@@ -8,11 +8,12 @@ int (*form(char check))(va_list)
 {
 	int i;
 
-	mi_funct array[6] = {{"c", print_char},
+	mi_funct array[] = {{"c", print_char},
 		{"s", print_str},
 		{"%", print_per},
 		{"d", print_int},
 		{"i", print_int},
+		{"u", print_int},
 		{NULL, NULL}};
 
 	for (i = 0; (array[i]).spec != NULL; i++)
